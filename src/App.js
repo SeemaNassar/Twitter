@@ -1,10 +1,12 @@
-import { LeftSide } from './components';
+
 import './App.css';
 
 const App = () => {
   return (
     <div className="app">
-      <LeftSide />
+      <div>
+        LeftSide
+      </div>
       <div>
         Home
       </div>
