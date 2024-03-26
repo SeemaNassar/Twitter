@@ -1,11 +1,11 @@
-
+import { LeftSide } from './components';
 import './App.css';
 
 const App = () => {
   return (
     <div className="app">
       <div>
-        LeftSide
+        <LeftSide />
       </div>
       <div>
         Home
