@@ -1,0 +1,87 @@
+.suggested-follow {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  justify-content: center; /* Center items horizontally */
+  padding: 0 var(--padding) ;
+  border-bottom: 1px solid var(--gray-color-border);
+  button.follow {
+      width: 5em;
+      height: 2.2em;
+      border: none;
+      border-radius: 1.5em;
+      font-size: 1em;
+      
+  }
+
+}
+.suggested-follow > :first-child {
+  padding: var(--padding); /* Apply padding only to the first child */
+}
+
+.follow-container1 , .show-more1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-left: calc(-1 * var(--padding));
+  padding: var(--padding); /* Add padding */
+  text-decoration: none;
+
+  &:hover{
+    background-color: rgb(13, 13, 13);
+      cursor: pointer;
+  }
+}
+
+
+
+
+.follow-container1 > .follow-name {
+  
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  svg {
+      width: 20px;
+     
+  }
+  .display {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+  }
+  span.username {
+      font-weight: 600;
+      color: var(--gray-color);
+      font-size: 12px;
+    
+  }
+  .displayName{
+      font-weight: bold;
+      font-size: 15px;
+      &:hover{
+          text-decoration: underline;
+      }
+  }   
+  span.verified {
+      vertical-align: middle;
+  }
+
+}
+.follow-container1 > .follow-name >.description{
+  padding-top: 10px ;
+ 
+}
+
+.follow-container1:hover {
+  background-color: rgb(13, 13, 13);
+  cursor: pointer;
+  
+}
+.suggested-follow > .show-more1{
+  
+  color: #2F9BF0;
+
+}

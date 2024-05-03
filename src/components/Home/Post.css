@@ -1,0 +1,123 @@
+:root {
+ --background-action-color : #142d3c;
+ --base-action-color : #357db4;
+  }
+.post {
+    display: flex; 
+    align-items: flex-start;
+    border-bottom: 1px solid var(--gray-color-border);
+    padding-bottom: 10px;
+    padding-left: 15px;
+   
+
+    .post_body{
+        flex: 1;
+        padding: 10px;
+        padding-right: 20px;
+        img {
+            border-radius: 20px;
+            width: 100%;
+        }
+        
+    }
+    .post_footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        color: var(--gray-color);
+        div{
+            display: flex;
+            align-items: center;
+        }
+        svg {
+            color: var(--gray-color);
+        }
+        .more_action {
+            display: flex;
+            gap: 20px;
+        }
+
+        span{
+            margin-left: -5px;
+        }
+        div > div{
+            display: flex;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+        }
+        .retweet:hover {
+            --background-action-color :#0C1A14 ;
+            --base-action-color : rgb(46, 182, 46) ;
+        }
+        .like:hover{
+            --background-action-color : #200B15;
+            --base-action-color : #9B3055;
+        }
+        .comment:hover,
+        .retweet:hover,
+        .like:hover,
+        .viewer:hover{
+            color: var(--base-action-color);
+
+            div {
+
+                border-radius: 50%;
+                background: var(--background-action-color);
+                svg{
+                    fill: var(--base-action-color);
+                }
+            }
+
+        }
+        .save:hover,
+        .share:hover {
+            background: var(--background-action-color); 
+            border-radius: 50%;      
+        }
+                
+        .save:hover svg,
+        .share:hover svg {
+            fill: var(--base-action-color);
+        }
+
+
+
+    }
+    .post_headerText{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        h3{
+            font-size: 15px;
+        }
+        svg {
+            font-size: 14px !important;
+        }
+        span.username {
+            font-weight: 600;
+            color: var(--gray-color);
+            font-size: 12px;
+
+
+        }
+        span.verified {
+            vertical-align: middle;
+        }
+
+        
+    }
+    .postDescription{
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .avatar-container {
+       padding-top: 13px;
+    }
+    
+    &:hover {
+        background-color: rgb(13, 13, 13);
+        cursor: pointer;
+    }
+}

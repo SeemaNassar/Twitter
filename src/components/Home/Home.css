@@ -1,0 +1,312 @@
+:root {
+    --gray-color: #8899a6; 
+    --main-color: #fff;
+    --black-color :#000;
+    --gray-color-border:rgb(69, 69, 69);
+  }
+.home{
+    border-right: 0.3px solid var(--gray-color-border);
+    border-left: 0.3px solid var(--gray-color-border);
+
+    a {
+        color: var(--main-color);
+        text-decoration: none; 
+    }
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.97); 
+        display: grid;
+        grid-template-columns: 0.15fr 1fr 0.3fr;
+        align-items: center;
+        height: 3.3em;
+        svg {
+            height: 1.8em;
+            width: 1.4em;
+        }
+        .back{
+            width: 2em;
+            display: flex;
+            justify-content: center;
+            margin-left: 1em;
+        }
+
+        .back:hover {
+            border-radius: 50%;
+            background: #212121;  
+        }
+        
+        .name {
+            font-weight: 900;
+        }
+    
+        .postsNumber {
+            color: #8899a6;
+        }
+
+    }
+    body {  
+        /* padding-top:50.50px; */
+        display: flex;
+       
+        flex-direction: column;
+        /* gap: 20px; */
+        svg {
+            height: 1.4em;
+            color: var(--main-color);
+        
+        }
+        .topProfile {
+            display: grid;
+            grid-template-columns: 2fr 1.1fr;
+            
+        }
+        .backgroundImg {
+            position: relative;
+            height: 200px; 
+            overflow: hidden;
+            &:hover {
+                cursor: pointer;
+            }
+          }
+          
+          .backgroundImg img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            z-index: 1;
+          }
+        .container {
+            display: flex; 
+            flex-direction: column; 
+            gap: 15px; 
+            margin-left: 22px;
+            .UserAvatar {
+                position: relative;
+                width: 150px; 
+                height: 150px; 
+                border-radius: 50%;
+                overflow: hidden;
+                border: 5px solid var(--black-color); 
+                margin-top: -75px;
+                
+                z-index: 2;
+            }
+            
+            .UserAvatar img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; 
+            
+            }
+
+            .UserActions {
+                display: grid;
+                grid-template-columns: .4fr 0.4fr .4fr;
+                align-items: center;
+                color: var(--main-color);
+                margin-top: -20px;
+
+                .notification:hover , .more:hover{
+                    background-color: #181818;
+                }
+
+            }
+            .name {
+                font-weight: 700;
+                font-size: 1.40em;
+               
+                /* margin-top: 15px; */
+            }
+        
+            .username {
+            color: var(--gray-color);
+           
+            /* margin-top: 5px; */
+            }
+            .UserDescription {
+                font-weight: 500;
+               
+            }
+            .UserDetails {
+                display: flex;
+                color: var(--gray-color);
+                align-items: center;
+                gap: 20px;
+                svg {
+                    color: var(--gray-color);
+                }
+                a {
+                    color: #2F9BF0;
+                    text-decoration: none;
+                }
+                span {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;    
+                    
+                }
+            }
+            .UserStatistics {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                a {
+                    display: flex;
+                    gap: 6px;
+                    border-bottom: 1px solid transparent;
+
+                    span:nth-child(even){
+                        color: var(--gray-color);
+                    }
+
+                    &:hover {
+                       
+                        border-bottom-color: currentColor;
+                    }
+                    
+                    
+                }
+
+            }
+            .MutualFriends {
+                display: grid;
+                grid-template-columns: 11% 88%;
+                align-items: center;
+                color: var(--gray-color);
+                border-bottom: 1px solid transparent;
+                .friendsImg {
+                    display: flex;
+                    
+                    .imgs {
+                        width: 22px; 
+                        height: 22px; 
+                        overflow: hidden; 
+                        border-radius: 50%;
+                        border: 1px solid var(--black-color); 
+
+                    }
+                    
+                    .imgs img {
+                        width: 100%; 
+                        height: 100%; 
+                        object-fit: cover; 
+                    
+                    }
+
+                    .first {
+                        position: relative;
+                        z-index: 3;
+                        
+                    }
+                    .second {
+                        position: relative;
+                        margin-left: -0.5em;
+                        z-index: 2;
+                        
+                    }
+                    .third {
+                        position: relative;
+                        margin-left: -0.5em;
+                        z-index: 1;
+                        
+                    }
+                    &:hover {
+                        cursor: pointer;
+                    }
+   
+                }
+                
+                .names:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                    
+                }
+            }
+
+        }
+        .ProfileActions {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            justify-content: center; 
+            align-items: center; 
+            grid-auto-rows: 3.5em; 
+            border-bottom: 1px solid var(--gray-color-border);
+
+            .action {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+                text-align: center;
+                color: var(--gray-color); 
+
+                &:hover{
+                     background-color: #181818;
+                     cursor: pointer;
+                }
+            }
+
+            a.active {
+                color: currentColor;
+                font-weight: bold;
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    height: 100%;
+                    position: relative;
+                }
+                span::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
+                    width: 100%;
+                    height: 4px; 
+                    background: #1da1f2;
+                    border-radius: 10px; 
+                }
+
+              }
+
+        }   
+
+    }
+    header button,
+    body .UserActions button {
+        border-radius: 50%;
+        border: 1px solid var(--gray-color-border); 
+        width: 3em;
+        height: 3em;
+        background-color: var(--black-color);
+        cursor: pointer;
+
+    }
+    header button.following ,
+    body .UserActions button.following  {
+        display: block;
+        color: var(--main-color);
+        width: 7em;
+        height: 2.5em;
+        border-radius: 1.5em;
+        font-size: 1em;
+        background-color: transparent;
+
+        &:hover{
+            color: red;
+            background-color: rgba(255, 0, 0, 0.08);
+            border-color: red;
+            
+        }
+    }
+
+}

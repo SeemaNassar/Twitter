@@ -1,4 +1,5 @@
-import './leftSide.css'
+import './leftSide.css';
+import Avatar from '../Avatar'
 import { home, explore, twitter, notifications, messages, bookmarks, lists, communities, profile, more, dots } from './icons'
 import React, { useState } from 'react';
 const LeftSide = () => {
@@ -25,15 +26,10 @@ const LeftSide = () => {
                     </ul>
                     <button className="more"><span>{more} More</span></button>
                 </nav>
-                <button className="post">Post</button>
+                <button className="postButton">Post</button>
                 <footer>
                     <button className="account">
-                        <div className="photo">
-                            <img 
-                                alt="Seema Nassar" 
-                                src="https://pbs.twimg.com/profile_images/1681577524294303746/Z6487-0G_normal.jpg"
-                            />
-                        </div>
+                        <Avatar name='Seema Nassar' src='https://pbs.twimg.com/profile_images/1681577524294303746/Z6487-0G_normal.jpg'/>
                         <div>
                             <div className="name">Seema Nassar</div>
                             <div className="username">@NassarSeema</div>

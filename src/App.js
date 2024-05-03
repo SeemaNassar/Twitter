@@ -1,4 +1,6 @@
 import { LeftSide } from './components';
+import { Home } from './components';
+import { Widgets } from './components'
 import './App.css';
 
 const App = () => {
@@ -8,10 +10,10 @@ const App = () => {
         <LeftSide />
       </div>
       <div>
-        Home
+        <Home />
       </div>
       <div>
-        rightSide
+        <Widgets />
       </div>
     </div>
   );
