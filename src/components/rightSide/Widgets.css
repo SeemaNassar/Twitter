@@ -1,0 +1,220 @@
+:root {
+    --gray-color-seach: #202327;
+    --grey-color-text: #757575;
+    --padding:14px;
+    
+}
+.right-side{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 20px;
+    gap: 10px;
+}
+.search-form {
+    position: sticky;
+    top: 0;
+    padding: 8px 0;
+    width: 100%;
+    background-color: #000000;
+}
+.search {
+    
+    width: 90%;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    /* margin-top: 8px; */
+    padding: var(--padding);
+    border-radius: 28px;
+    background-color: var(--gray-color-seach);
+    transition: box-shadow 0.25s;
+
+}
+.search:focus-within {
+    box-shadow: 0 0 1px #2F9AEF;
+    border: 1px solid #2F9AEF;
+    svg{
+        fill: #2F9AEF;
+    }
+    background-color: #000000;
+}
+
+.search svg{
+    height: 1.3em;
+    fill: var(--grey-color-text) ;
+}
+.search-input{
+    outline: none;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    color: #fff;
+    margin-left: var(--padding);
+    /* background-color: pink; */
+    height: 140%;
+    flex: 1;
+    
+
+}
+
+.search-input::-webkit-search-cancel-button {
+-webkit-appearance: none;
+height: 20px;
+width: 20px;
+margin-left: .4em;
+border-radius: 50%;
+background-color: #2F9AEF;
+background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000'><path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z'/></svg>");
+cursor: pointer;
+}
+
+.search-input::placeholder {
+    color: var(--grey-color-text);
+}
+
+.followList-container {
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    font-size: 15px;
+    width: 90%;
+    background-color: transparent;
+    border: 1px solid var(--gray-color-seach);
+    border-radius: 20px ;
+    padding: 0 var(--padding) ;
+    justify-content: center; /* Center items horizontally */
+
+    button.follow {
+        width: 5em;
+        height: 2.2em;
+        border: none;
+        border-radius: 1.5em;
+        font-size: 1em;
+        
+    }
+
+}
+
+button.more-left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+    svg {
+        height: 1.3em;
+        fill: var(--grey-color-text);
+        
+    }
+}
+button.more-left:hover{
+    background: var(--background-action-color); 
+    border-radius: 50%;      
+}
+        
+button.more-left:hover svg{
+    fill: #2F9AEF;
+}
+.followList-container > :first-child {
+    padding: var(--padding); /* Apply padding only to the first child */
+}
+
+.follow-container , .show-more {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-left: calc(-1 * var(--padding));
+    padding: var(--padding); /* Add padding */
+    text-decoration: none;
+
+    &:hover{
+        background-color: rgb(16, 15, 15);
+        cursor: pointer;
+    }
+}
+.show-more{
+    color: #2F9BF0;
+    &:hover{
+        border-bottom-left-radius: 20px; 
+        border-bottom-right-radius: 20px; 
+    }
+}
+
+
+
+.follow-container > .follow-name {
+    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    svg {
+        width: 20px;
+       
+    }
+    .display {
+        display: flex;
+        justify-items: center;
+        gap: 2px;
+    }
+    span.username {
+        font-weight: 600;
+        color: var(--gray-color);
+        font-size: 12px;
+      
+    }
+    .displayName{
+        font-weight: bold;
+        font-size: 15px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }   
+    span.verified {
+        vertical-align: middle;
+    }
+}
+
+.follow-container:hover {
+    background-color: rgb(13, 13, 13);
+    cursor: pointer;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+    font-size: 14px;
+    padding: var(--padding);
+    width: 85%;
+    color: var(--grey-color-text);
+}
+
+.footer-links a, .footer-links span {
+    color: var(--grey-color-text);
+    text-decoration: none; 
+    margin-right: 3px; 
+}
+
+
+.footer-links span {
+    margin-right: 0; 
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+.footer-links .footer-more{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    height: 1.3em;   
+    fill: var(--grey-color-text);
+    svg{
+        margin-top: 2px;
+    }
+}
+
